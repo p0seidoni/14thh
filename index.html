@@ -7,182 +7,191 @@
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
 <style>
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ffd6e8, #ffc0cb);
-    color: #b30059;
-    overflow-x: hidden;
-    min-height: 100vh;
-    position: relative;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #ffc0cb);
+  color: #b30059;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
 }
 h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 48px;
-    margin-bottom: 0.2em;
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  margin-bottom: 0.2em;
 }
 p {
-    font-size: 18px;
-    margin-top: 0;
+  font-size: 18px;
+  margin-top: 0;
 }
 section {
-    padding: 60px 20px;
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
+  padding: 60px 20px;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
 }
 button {
-    padding: 12px 28px;
-    margin: 15px 10px 0;
-    font-size: 18px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    user-select: none;
+  padding: 12px 28px;
+  margin: 15px 10px 0;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
 }
 .primary {
-    background-color: #ff4d88;
-    color: white;
+  background-color: #ff4d88;
+  color: white;
 }
 .primary:hover {
-    background-color: #ff1a66;
+  background-color: #ff1a66;
 }
 .secondary {
-    background-color: #fff;
-    color: #ff4d88;
-    border: 2px solid #ff4d88;
+  background-color: #fff;
+  color: #ff4d88;
+  border: 2px solid #ff4d88;
 }
 .hidden {
-    display: none;
+  display: none;
 }
 /* Heart heartbeat animation */
 .heart {
-    font-size: 60px;
-    animation: heartbeat 1s infinite;
-    margin-bottom: 0.5em;
+  font-size: 60px;
+  animation: heartbeat 1s infinite;
+  margin-bottom: 0.5em;
 }
 @keyframes heartbeat {
-    0%, 50%, 100% { transform: scale(1); }
-    25%, 75% { transform: scale(1.2); }
+  0%,50%,100% { transform: scale(1); }
+  25%,75% { transform: scale(1.2); }
 }
 /* Fade-in */
 .fade-in {
-    animation: fadeIn 2s ease forwards;
-    opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
 }
-@keyframes fadeIn {
-    to { opacity: 1; }
-}
+@keyframes fadeIn { to { opacity:1; } }
 /* Love message style */
 .love-message {
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  position: relative;
 }
 .big-text {
-    font-size: 28px;
-    margin-top: 20px;
-    color: #b30059;
-    animation: scaleUp 1s ease forwards;
+  font-size: 28px;
+  margin-top: 20px;
+  color: #b30059;
+  animation: scaleUp 1s ease forwards;
 }
 @keyframes scaleUp {
-    0% { transform: scale(0.8); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+  0% { transform: scale(0.8); opacity:0;}
+  100% { transform: scale(1); opacity:1;}
 }
 .footer {
-    margin-top: 40px;
-    font-style: italic;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 20px;
+  margin-top: 40px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 20px;
 }
-/* Small heart icon next to footer text */
 .footer .heart-icon {
-    width: 24px;
-    height: 24px;
-    color: #ff4d88;
-    animation: heartbeat 1.5s infinite;
-    user-select: none;
+  width:24px;
+  height:24px;
+  color:#ff4d88;
+  animation: heartbeat 1.5s infinite;
 }
-/* Floating hearts */
 .floating-hearts {
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: visible;
-    z-index: 0;
+  pointer-events:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  overflow:visible;
+  z-index:0;
 }
 .floating-heart {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: #ff4d88;
-    opacity: 0.7;
-    transform-origin: center;
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    animation: floatUp linear infinite;
+  position:absolute;
+  width:12px;
+  height:12px;
+  background-color:#ff4d88;
+  opacity:0.7;
+  transform-origin:center;
+  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: floatUp linear infinite;
 }
 .floating-heart::before,
 .floating-heart::after {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: #ff4d88;
-    border-radius: 50%;
+  content:"";
+  position:absolute;
+  width:12px;
+  height:12px;
+  background-color:#ff4d88;
+  border-radius:50%;
 }
-.floating-heart::before { top: -6px; left: 0; }
-.floating-heart::after { left: 6px; top: 0; }
+.floating-heart::before { top:-6px; left:0;}
+.floating-heart::after { left:6px; top:0;}
 @keyframes floatUp {
-    0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
-    100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+  0%{transform:translateY(0) rotate(0deg);opacity:0.7;}
+  100%{transform:translateY(-120vh) rotate(360deg);opacity:0;}
 }
 /* Heart rain container */
 #heartRain {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    overflow: visible;
-    z-index: 9999;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  pointer-events:none;
+  overflow:visible;
+  z-index:9999;
 }
 .heart-drop {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #ff4d88;
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    animation: fall 3s linear forwards;
-    opacity: 0.9;
+  position:absolute;
+  width:20px;
+  height:20px;
+  background-color:#ff4d88;
+  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: fall 3s linear forwards;
+  opacity:0.9;
 }
 .heart-drop::before,
 .heart-drop::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #ff4d88;
-    border-radius: 50%;
+  content:"";
+  position:absolute;
+  width:20px;
+  height:20px;
+  background-color:#ff4d88;
+  border-radius:50%;
 }
-.heart-drop::before { top: -10px; left: 0; }
-.heart-drop::after { left: 10px; top: 0; }
+.heart-drop::before {top:-10px; left:0;}
+.heart-drop::after {left:10px; top:0;}
 @keyframes fall {
-    0% { transform: translateY(-30px) rotate(0deg); opacity: 0.9; }
-    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+  0%{transform:translateY(-30px) rotate(0deg); opacity:0.9;}
+  100%{transform:translateY(110vh) rotate(360deg); opacity:0;}
+}
+/* Firework animation */
+.firework {
+  position:absolute;
+  width:6px;
+  height:6px;
+  background-color:#ff4d88;
+  border-radius:50%;
+  animation: explode 1s forwards;
+  pointer-events:none;
+}
+@keyframes explode {
+  0%{transform:scale(0);opacity:1;}
+  50%{transform:scale(1.5);opacity:1;}
+  100%{transform:scale(0);opacity:0;}
 }
 </style>
 </head>
 <body>
-
-<!-- Floating hearts -->
 <div class="floating-hearts" aria-hidden="true">
   <div class="floating-heart"></div>
   <div class="floating-heart"></div>
@@ -226,40 +235,51 @@ button {
 </div>
 </section>
 
-<!-- Heart rain container -->
 <div id="heartRain" aria-hidden="true"></div>
 
 <script>
 function openHeart() {
-document.getElementById("letter").classList.remove("hidden");
-window.scrollTo({ top: document.getElementById("letter").offsetTop, behavior: 'smooth' });
+  document.getElementById("letter").classList.remove("hidden");
+  window.scrollTo({ top: document.getElementById("letter").offsetTop, behavior:'smooth'});
 }
-function hideNo() {
-document.getElementById("noBtn").style.display = "none";
-}
+function hideNo() {document.getElementById("noBtn").style.display="none";}
 function sayYes() {
-document.getElementById("finalMessage").classList.remove("hidden");
-startHeartRain();
+  document.getElementById("finalMessage").classList.remove("hidden");
+  startHeartRain();
+  startFireworks();
 }
 function startHeartRain() {
-const container = document.getElementById("heartRain");
-let count = 0;
-const maxHearts = 40;
-function createHeart() {
-if(count >= maxHearts) return;
-count++;
-const heart = document.createElement("div");
-heart.classList.add("heart-drop");
-heart.style.left = Math.random() * 100 + "vw";
-heart.style.animationDuration = 2 + Math.random() * 2 + "s";
-container.appendChild(heart);
-heart.addEventListener("animationend", () => {
-container.removeChild(heart);
-count--;
-createHeart();
-});
+  const container=document.getElementById("heartRain");
+  let count=0;
+  const maxHearts=40;
+  function createHeart() {
+    if(count>=maxHearts) return;
+    count++;
+    const heart=document.createElement("div");
+    heart.classList.add("heart-drop");
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=2+Math.random()*2+"s";
+    container.appendChild(heart);
+    heart.addEventListener("animationend",()=>{
+      container.removeChild(heart);
+      count--;
+      createHeart();
+    });
+  }
+  for(let i=0;i<15;i++) createHeart();
 }
-for(let i=0;i<15;i++) createHeart();
+// Firework effect
+function startFireworks() {
+  const text = document.querySelector("#finalMessage");
+  const rect = text.getBoundingClientRect();
+  for(let i=0;i<20;i++){
+    const fire = document.createElement("div");
+    fire.className="firework";
+    fire.style.left = rect.left + Math.random()*rect.width + "px";
+    fire.style.top = rect.top + Math.random()*rect.height + "px";
+    document.body.appendChild(fire);
+    setTimeout(()=>{fire.remove();},1000);
+  }
 }
 </script>
 </body>
