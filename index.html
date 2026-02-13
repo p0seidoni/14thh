@@ -6,8 +6,7 @@
 <title>ვალენტინობა ❤️</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
 <style>
-  /* Reset & base */
-  body {
+body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #ffd6e8, #ffc0cb);
@@ -15,23 +14,23 @@
     overflow-x: hidden;
     min-height: 100vh;
     position: relative;
-  }
-  h1 {
+}
+h1 {
     font-family: 'Great Vibes', cursive;
     font-size: 48px;
     margin-bottom: 0.2em;
-  }
-  p {
+}
+p {
     font-size: 18px;
     margin-top: 0;
-  }
-  section {
+}
+section {
     padding: 60px 20px;
     max-width: 700px;
     margin: auto;
     text-align: center;
-  }
-  button {
+}
+button {
     padding: 12px 28px;
     margin: 15px 10px 0;
     font-size: 18px;
@@ -40,53 +39,58 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     user-select: none;
-  }
-  .primary {
+}
+.primary {
     background-color: #ff4d88;
     color: white;
-  }
-  .primary:hover {
+}
+.primary:hover {
     background-color: #ff1a66;
-  }
-  .secondary {
+}
+.secondary {
     background-color: #fff;
     color: #ff4d88;
     border: 2px solid #ff4d88;
-  }
-  .hidden {
+}
+.hidden {
     display: none;
-  }
-  /* Heart heartbeat animation */
-  .heart {
+}
+/* Heart heartbeat animation */
+.heart {
     font-size: 60px;
     animation: heartbeat 1s infinite;
     margin-bottom: 0.5em;
-  }
-  @keyframes heartbeat {
+}
+@keyframes heartbeat {
     0%, 50%, 100% { transform: scale(1); }
     25%, 75% { transform: scale(1.2); }
-  }
-  /* Fade-in */
-  .fade-in {
+}
+/* Fade-in */
+.fade-in {
     animation: fadeIn 2s ease forwards;
     opacity: 0;
-  }
-  @keyframes fadeIn {
+}
+@keyframes fadeIn {
     to { opacity: 1; }
-  }
-  /* Love message style */
-  .love-message {
+}
+/* Love message style */
+.love-message {
     font-size: 18px;
     line-height: 1.6;
     max-width: 600px;
     margin: 0 auto 30px;
-  }
-  .big-text {
+}
+.big-text {
     font-size: 28px;
     margin-top: 20px;
     color: #b30059;
-  }
-  .footer {
+    animation: scaleUp 1s ease forwards;
+}
+@keyframes scaleUp {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.footer {
     margin-top: 40px;
     font-style: italic;
     display: flex;
@@ -94,18 +98,17 @@
     justify-content: center;
     gap: 10px;
     font-size: 20px;
-  }
-  /* Small heart icon next to footer text */
-  .footer .heart-icon {
+}
+/* Small heart icon next to footer text */
+.footer .heart-icon {
     width: 24px;
     height: 24px;
     color: #ff4d88;
     animation: heartbeat 1.5s infinite;
     user-select: none;
-  }
-
-  /* Background floating hearts */
-  .floating-hearts {
+}
+/* Floating hearts */
+.floating-hearts {
     pointer-events: none;
     position: fixed;
     top: 0;
@@ -114,8 +117,8 @@
     height: 100vh;
     overflow: visible;
     z-index: 0;
-  }
-  .floating-heart {
+}
+.floating-heart {
     position: absolute;
     width: 12px;
     height: 12px;
@@ -124,68 +127,24 @@
     transform-origin: center;
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     animation: floatUp linear infinite;
-  }
-  .floating-heart::before,
-  .floating-heart::after {
+}
+.floating-heart::before,
+.floating-heart::after {
     content: "";
     position: absolute;
     width: 12px;
     height: 12px;
     background-color: #ff4d88;
     border-radius: 50%;
-  }
-  .floating-heart::before {
-    top: -6px;
-    left: 0;
-  }
-  .floating-heart::after {
-    left: 6px;
-    top: 0;
-  }
-  @keyframes floatUp {
-    0% {
-      transform: translateY(0) rotate(0deg);
-      opacity: 0.7;
-    }
-    100% {
-      transform: translateY(-120vh) rotate(360deg);
-      opacity: 0;
-    }
-  }
-  /* Different animation durations and left positions for multiple hearts */
-  .floating-heart:nth-child(1) {
-    left: 10vw;
-    animation-duration: 10s;
-    animation-delay: 0s;
-  }
-  .floating-heart:nth-child(2) {
-    left: 25vw;
-    animation-duration: 12s;
-    animation-delay: 3s;
-  }
-  .floating-heart:nth-child(3) {
-    left: 40vw;
-    animation-duration: 8s;
-    animation-delay: 1.5s;
-  }
-  .floating-heart:nth-child(4) {
-    left: 55vw;
-    animation-duration: 11s;
-    animation-delay: 2.5s;
-  }
-  .floating-heart:nth-child(5) {
-    left: 70vw;
-    animation-duration: 9s;
-    animation-delay: 4s;
-  }
-  .floating-heart:nth-child(6) {
-    left: 85vw;
-    animation-duration: 13s;
-    animation-delay: 1s;
-  }
-
-  /* Heart rain container */
-  #heartRain {
+}
+.floating-heart::before { top: -6px; left: 0; }
+.floating-heart::after { left: 6px; top: 0; }
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+    100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+}
+/* Heart rain container */
+#heartRain {
     position: fixed;
     top: 0;
     left: 0;
@@ -194,8 +153,8 @@
     pointer-events: none;
     overflow: visible;
     z-index: 9999;
-  }
-  .heart-drop {
+}
+.heart-drop {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -203,130 +162,105 @@
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     animation: fall 3s linear forwards;
     opacity: 0.9;
-  }
-  .heart-drop::before,
-  .heart-drop::after {
+}
+.heart-drop::before,
+.heart-drop::after {
     content: "";
     position: absolute;
     width: 20px;
     height: 20px;
     background-color: #ff4d88;
     border-radius: 50%;
-  }
-  .heart-drop::before {
-    top: -10px;
-    left: 0;
-  }
-  .heart-drop::after {
-    left: 10px;
-    top: 0;
-  }
-  @keyframes fall {
-    0% {
-      transform: translateY(-30px) rotate(0deg);
-      opacity: 0.9;
-    }
-    100% {
-      transform: translateY(110vh) rotate(360deg);
-      opacity: 0;
-    }
-  }
+}
+.heart-drop::before { top: -10px; left: 0; }
+.heart-drop::after { left: 10px; top: 0; }
+@keyframes fall {
+    0% { transform: translateY(-30px) rotate(0deg); opacity: 0.9; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
 </style>
 </head>
 <body>
 
-  <!-- Background floating hearts -->
-  <div class="floating-hearts" aria-hidden="true">
-    <div class="floating-heart"></div>
-    <div class="floating-heart"></div>
-    <div class="floating-heart"></div>
-    <div class="floating-heart"></div>
-    <div class="floating-heart"></div>
-    <div class="floating-heart"></div>
-  </div>
+<!-- Floating hearts -->
+<div class="floating-hearts" aria-hidden="true">
+  <div class="floating-heart"></div>
+  <div class="floating-heart"></div>
+  <div class="floating-heart"></div>
+  <div class="floating-heart"></div>
+  <div class="floating-heart"></div>
+  <div class="floating-heart"></div>
+</div>
 
-  <section>
-    <h1>გილოცავ ვალენტინობას ცხოვრებავ ❤️</h1>
-    <div class="heart" aria-label="heartbeat heart">❤️</div>
-    <p>ეს ჩემი პატარა პრინცესისთვის</p>
-    <button class="primary" onclick="openHeart()">ჩემი გულის კარები</button>
-  </section>
+<section>
+<h1>გილოცავ ვალენტინობას ცხოვრებავ ❤️</h1>
+<div class="heart" aria-label="heartbeat heart">❤️</div>
+<p>ეს ჩემი პატარა პრინცესისთვის</p>
+<button class="primary" onclick="openHeart()">ჩემი გულის კარები</button>
+</section>
 
-  <section id="letter" class="hidden">
-    <div class="love-message fade-in">
-      <p>
-        გილოცავ ჩემო ცხოვრება დღევანდელ დღეს. გული მწყდება, რომ ერთად ვერ ავღნიშნავთ.
-        უზომოთ მენატრები მინდა გულში ჩაგიკრა და აღარ გაგიშვა.
-        უზომოთ მიყვარხარ. მინდა სიცოცხლის ბოლომდე ჩემი გულის დედოფალი იყო.
-      </p>
-    </div>
+<section id="letter" class="hidden">
+<div class="love-message fade-in">
+<p>
+გილოცავ ჩემო ცხოვრება დღევანდელ დღეს. გული მწყდება, რომ ერთად ვერ ავღნიშნავთ.
+უზომოთ მენატრები მინდა გულში ჩაგიკრა და აღარ გაგიშვა.
+უზომოთ მიყვარხარ. მინდა სიცოცხლის ბოლომდე ჩემი გულის დედოფალი იყო.
+</p>
+</div>
 
-    <h2>იქნები ჩემი პრინცესა?</h2>
-    <button class="primary" id="yesBtn" onclick="sayYes()">კი</button>
-    <button class="secondary" id="noBtn" onclick="hideNo()">არა</button>
+<h2>იქნება ჩემი პრინცესა?</h2>
+<button class="primary" id="yesBtn" onclick="sayYes()">კი</button>
+<button class="secondary" id="noBtn" onclick="hideNo()">არა</button>
 
-    <div id="finalMessage" class="hidden big-text" aria-live="polite" aria-atomic="true">
-      მე შენს გვერდით ყველაზე ბედნიერი ადამიანი ვარ მიყვარხარ ❤️
-      <div class="footer">
-        <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42
-           4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81
-           14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4
-           6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-        შენი ცხვარუკასგან
-      </div>
-    </div>
-  </section>
+<div id="finalMessage" class="hidden big-text" aria-live="polite" aria-atomic="true">
+მე შენს გვერდით ყველაზე ბედნიერი ადამიანი ვარ მიყვარხარ ❤️
+<div class="footer">
+<svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42
+4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81
+14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4
+6.86-8.55 11.54L12 21.35z"/>
+</svg>
+შენი ცხვარუკასგან 🐑
+</div>
+</div>
+</section>
 
-  <!-- Heart rain container -->
-  <div id="heartRain" aria-hidden="true"></div>
+<!-- Heart rain container -->
+<div id="heartRain" aria-hidden="true"></div>
 
 <script>
-  function openHeart() {
-    document.getElementById("letter").classList.remove("hidden");
-    window.scrollTo({ top: document.getElementById("letter").offsetTop, behavior: 'smooth' });
-  }
-
-  function hideNo() {
-    document.getElementById("noBtn").style.display = "none";
-  }
-
-  function sayYes() {
-    document.getElementById("finalMessage").classList.remove("hidden");
-    startHeartRain();
-  }
-
-  // Heart rain animation
-  function startHeartRain() {
-    const container = document.getElementById("heartRain");
-    let count = 0;
-    const maxHearts = 30;
-
-    function createHeart() {
-      if (count >= maxHearts) return;
-      count++;
-      const heart = document.createElement("div");
-      heart.classList.add("heart-drop");
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = 2 + Math.random() * 2 + "s";
-
-      container.appendChild(heart);
-
-      // Remove heart after animation ends
-      heart.addEventListener("animationend", () => {
-        container.removeChild(heart);
-        count--;
-        createHeart(); // keep hearts coming while count < maxHearts
-      });
-    }
-
-    // create some initial hearts quickly
-    for (let i = 0; i < 10; i++) {
-      createHeart();
-    }
-  }
+function openHeart() {
+document.getElementById("letter").classList.remove("hidden");
+window.scrollTo({ top: document.getElementById("letter").offsetTop, behavior: 'smooth' });
+}
+function hideNo() {
+document.getElementById("noBtn").style.display = "none";
+}
+function sayYes() {
+document.getElementById("finalMessage").classList.remove("hidden");
+startHeartRain();
+}
+function startHeartRain() {
+const container = document.getElementById("heartRain");
+let count = 0;
+const maxHearts = 40;
+function createHeart() {
+if(count >= maxHearts) return;
+count++;
+const heart = document.createElement("div");
+heart.classList.add("heart-drop");
+heart.style.left = Math.random() * 100 + "vw";
+heart.style.animationDuration = 2 + Math.random() * 2 + "s";
+container.appendChild(heart);
+heart.addEventListener("animationend", () => {
+container.removeChild(heart);
+count--;
+createHeart();
+});
+}
+for(let i=0;i<15;i++) createHeart();
+}
 </script>
-
 </body>
 </html>
